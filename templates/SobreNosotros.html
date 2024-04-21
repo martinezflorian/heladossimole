@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/style.css" />
+    <script
+      src="https://kit.fontawesome.com/fb6dbcd0c6.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap"
       rel="stylesheet"
@@ -23,12 +28,47 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body class="SobreNosotros">
+    <div class="NavBar">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html">Helados Simole</a>
+          <img
+            src="/imgs/iconoHelado.png"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="/index.html">Inicio</a>
+              <a class="nav-link" href="./SobreNosotros.html">Sobre Nosotros</a>
+              <a class="nav-link" href="./productos.html">Productos</a>
+              <a class="nav-link" href="./contacto.html">Contacto</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
     <main>
       <section class="historia">
         <h2>Nuestra Historia</h2>
         <p>
-          Heladería Simole abrió sus puertas en el año 1998 en el corazón de la
+          Heladería Simole abrió sus puertas en el año 1978 en el corazón de la
           ciudad. Fundada por la familia Simole, nuestro negocio comenzó como un
           pequeño local familiar con el deseo de compartir con la comunidad la
           pasión por los helados artesanales.
@@ -101,14 +141,24 @@
         <p>
           Seguimos innovando en nuestros sabores y en nuestras técnicas de
           producción, siempre con el objetivo de ofrecer a nuestros clientes la
-          mejor experiencia posible. Además, nos enorgullece formar parte activa
-          de la comunidad, participando en eventos locales y apoyando
-          iniciativas sociales y de pequeños productores.
+          mejor experiencia posible.
         </p>
       </section>
     </main>
     <footer>
       <p>&copy; 2024 Heladería Delicias - Todos los derechos reservados</p>
+      <div class="redes-sociales">
+        <a href="enlaceAWhastapp"
+          ><i class="fa-brands fa-square-whatsapp"></i
+        ></a>
+        <a href="enlaceAPedidosYa"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="enlaceAUbicacionHeladeria"
+          ><i class="fa-solid fa-map-pin"></i
+        ></a>
+        <a href="enlaceInstagram">
+          <i class="fa-brands fa-square-instagram"></i
+        ></a>
+      </div>
     </footer>
   </body>
 </html>
