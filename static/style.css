@@ -1,5 +1,66 @@
-body {
-  background-color: aqua;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.SobreNosotros {
+  background-color: #e4e4e1;
+  background-image: radial-gradient(
+      at top center,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(0, 0, 0, 0.03) 100%
+    ),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(143, 152, 157, 0.6) 100%
+    );
+  background-blend-mode: normal, multiply;
+}
+.historia > h2 {
+  display: flex;
+  justify-content: center;
+}
+.historia,
+.presente {
+  margin: 20px;
+}
+
+#carouselExampleAutoplaying {
+  max-width: 800px; /* Ajusta el ancho máximo del carrusel según sea necesario */
+  margin: 0 auto; /* Centra el carrusel en la página */
+}
+
+.carousel-inner .carousel-item img {
+  max-width: 100%; /* Ajusta el ancho máximo de las imágenes del carrusel */
+  height: 500px; /* Ajusta automáticamente la altura para mantener la proporción */
+  object-fit: cover; /* Escala las imágenes para que se ajusten al contenedor sin distorsionarse */
+}
+
+footer {
+  display: flex; /* Usamos flexbox para alinear los elementos en una fila */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  align-items: last baseline; /* Centra verticalmente los elementos */
+  background-color: #f0f0f0; /* Color de fondo */
+  padding: 10px 20px; /* Espaciado interno */
+}
+
+.redes-sociales a {
+  margin-right: 30px; /* Espacio entre los iconos */
+  color: #333; /* Color de los iconos */
+  font-size: 25px;
+}
+
+.redes-sociales a:hover {
+  color: #007bff; /* Color de los iconos al pasar el ratón */
 }
 
 nav {
