@@ -427,11 +427,12 @@ html {
 
 .contenedor .texto {
   position: absolute;
-  top: 0%; /* Posición vertical al 50% del contenedor */
-  left: 24%; /* Posición horizontal al 50% del contenedor */
-  width: 30%; /* Ancho igual al 40% del contenedor */
-  height: 90vh; /* Altura igual al 40% de la altura del contenedor */
-  background-color: rgba(49, 46, 46, 0.616); /* Fondo gris transparente */
+  top: 47.417%; /* Cambiado a 63% para que se parezca al primero */
+  left: 36.8%; /* Mantenido igual */
+  width: 30%; /* Mantenido igual */
+  height: 65vh; /* Cambiado a 100vh para que coincida con el primero */
+  max-width: 500px; /* Mantenido igual */
+  background-color: rgba(49, 46, 46, 0.616); /* Mantenido igual */
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
