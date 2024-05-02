@@ -56,16 +56,30 @@ footer {
   width: 100%; */
   height: 60px;
 }
+.footer-text {
+  display: block;
+}
 
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+}
 .redes-sociales a {
   margin-right: 30px; /* Espacio entre los iconos */
   color: #333; /* Color de los iconos */
   font-size: 25px;
 }
-
 .redes-sociales a:hover {
   color: #000080; /* Color de los iconos al pasar el ratón */
 }
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .footer-text {
+    display: none; /* Oculta el párrafo en pantallas pequeñas */
+  }
+}
+
 .video-background {
   position: relative;
   width: 100%;
@@ -392,7 +406,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   max-width: 1300px;
-  justify-content: space-between;
+  justify-content: left;
   flex-direction: row;
   margin: 0 auto;
 }
