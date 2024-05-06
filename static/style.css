@@ -1,3 +1,597 @@
-body {
-  background-color: aqua;
+body,
+html {
+  margin: 0;
+  margin-bottom: 70px;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  align-items: end;
+}
+.SobreNosotros {
+  background-color: #e4e4e1;
+  background-image: radial-gradient(
+      at top center,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(0, 0, 0, 0.03) 100%
+    ),
+    linear-gra
+      dient(to top, rgba(255, 255, 255, 0.1) 0%, rgba(143, 152, 157, 0.6) 100%);
+  background-blend-mode: normal, multiply;
+}
+.historia > h2 {
+  display: flex;
+  justify-content: center;
+}
+.historia,
+.presente {
+  margin: 20px;
+}
+
+#carouselExampleAutoplaying {
+  max-width: 800px; /* Ajusta el ancho máximo del carrusel según sea necesario */
+  margin: 0 auto; /* Centra el carrusel en la página */
+}
+
+.carousel-inner .carousel-item img {
+  max-width: 100%; /* Ajusta el ancho máximo de las imágenes del carrusel */
+  height: 500px; /* Ajusta automáticamente la altura para mantener la proporción */
+  object-fit: cover; /* Escala las imágenes para que se ajusten al contenedor sin distorsionarse */
+}
+
+footer {
+  display: flex; /* Usamos flexbox para alinear los elementos en una fila */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  align-items: last baseline; /* Centra verticalmente los elementos */
+  background-color: #f0f0f0; /* Color de fondo */
+  padding: 10px 20px; /* Espaciado interno */
+  /* position: fixed;
+  bottom: 0;
+  width: 100%; */
+  height: 60px;
+}
+.footer-text {
+  display: block;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+}
+.redes-sociales a {
+  margin-right: 30px; /* Espacio entre los iconos */
+  color: #333; /* Color de los iconos */
+  font-size: 25px;
+}
+.redes-sociales a:hover {
+  color: #000080; /* Color de los iconos al pasar el ratón */
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .footer-text {
+    display: none; /* Oculta el párrafo en pantallas pequeñas */
+  }
+}
+
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 82vh;
+  overflow: hidden;
+  padding-top: 9vh;
+  padding-bottom: 9vh;
+}
+
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-content {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.video-content h1 {
+  font-size: 54px;
+}
+.video-content p {
+  font-size: 22px;
+}
+.imagen-helado {
+  float: right;
+  margin-left: auto;
+  margin-right: 100px;
+  align-self: center;
+  margin-right: auto;
+  max-width: 100%;
+}
+.titulo {
+  text-transform: uppercase;
+  font-size: 36px;
+}
+
+.titulo-azul {
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #000080;
+  font-weight: bold;
+}
+
+.box {
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+  box-sizing: border-box;
+  transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+.box:hover {
+  transform: scale(1.03); /* Escala el texto al 110% cuando se pasa el mouse */
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px auto;
+  max-width: 800px;
+  text-align: center;
+}
+.helado-panoramico2 {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 750px;
+}
+.helado-panoramico4 {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 750px;
+}
+.texto-p {
+  font-size: 18px;
+}
+.contenedor-imagen {
+  position: relative;
+}
+.texto-sobre-imagen {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  width: 400px;
+  height: 100%;
+  max-width: 80%;
+  transform: translate(-50%, -50%);
+  left: 80%;
+  max-width: 500px;
+  top: 0%;
+  left: 20%; /* Ajusta la posición horizontal */
+  width: 28%; /* Ajusta la anchura */
+  height: 90vh;
+  max-width: 480px; /* Ajusta el ancho máximo */
+  background-color: rgba(49, 46, 46, 0.616);
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+}
+.texto-sobre-imagen h2 {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.texto-sobre-imagen p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.contenedor-imagen {
+  position: relative;
+}
+
+.texto-sobre-imagen {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.texto-destacado {
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.texto-destacado h2 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.texto-destacado p {
+  font-size: 18px;
+  color: white;
+}
+.azul {
+  color: #000080;
+  font-weight: bold;
+}
+.boton {
+  background-color: #000080;
+  color: white;
+  font-size: 24px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1;
+}
+
+.boton:hover {
+  background-color: #000080;
+}
+.contenedor {
+  position: relative;
+  width: 100vw; /* Ancho del contenedor igual al ancho de la ventana del navegador */
+  height: 100vh; /* Altura del contenedor igual a la altura de la ventana del navegador */
+}
+.contenedor img {
+  width: 100%; /* Ancho de la imagen al 100% del contenedor */
+  height: 100%; /* Altura de la imagen al 100% del contenedor */
+  object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+  display: block; /* Para evitar espacios innecesarios */
+}
+
+.contenedor .texto {
+  position: absolute;
+  top: 50%; /* Posición vertical al 50% del contenedor */
+  left: 50%; /* Posición horizontal al 50% del contenedor */
+  transform: translate(-50%, -50%); /* Centrar el texto */
+  width: 40%; /* Ancho igual al 40% del contenedor */
+  height: 40vh; /* Altura igual al 40% de la altura del contenedor */
+  background-color: rgba(49, 46, 46, 0.616); /* Fondo gris transparente */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+}
+
+.contenedor .texto p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.contenedor .titulo {
+  font-weight: bold;
+  font-size: 18px;
+}
+.titulo2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+.divisor {
+  color: #000080;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+}
+.contenedor .texto p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.contenedor .titulo {
+  font-weight: bold;
+  font-size: 18px;
+}
+.titulo2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+.divisor {
+  color: #000080;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: medium;
+}
+.navbar-nav a:hover {
+  font-size: large;
+  color: #000080;
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+
+/* Pantallas pequeñas (teléfonos móviles) */
+/* Pantallas pequeñas (teléfonos móviles) */
+@media only screen and (max-width: 600px) {
+  .video-background {
+    height: 50vh;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+  }
+  .texto-sobre-imagen {
+    width: 90%; /* Reducir el ancho del texto en pantallas más pequeñas */
+  }
+  .imagen-helado {
+    display: none;
+  }
+  .video-content h1 {
+    font-size: 24px;
+  }
+  .video-content p {
+    font-size: 12px;
+  }
+}
+
+/* Pantallas medianas (tabletas) */
+@media only screen and (min-width: 601px) {
+  .video-background {
+    height: 60vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  .texto-sobre-imagen {
+    position: absolute;
+    top: 63%; /* Posición vertical al 0% del contenedor */
+    left: 24%; /* Posición horizontal al 24% del contenedor */
+    width: 30%; /* Ancho igual al 30% del contenedor */
+    height: 100vh; /* Altura igual al 90% de la altura del viewport */
+    max-width: 500px; /* Ancho máximo de 500px */
+    background-color: rgba(49, 46, 46, 0.616); /* Fondo gris transparente */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+  }
+
+  .texto-destacado {
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px; /* Ajusta el margen superior para separarlo del gris */
+  }
+  .texto-destacado h2 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 10px; /* Ajusta el margen inferior del título */
+  }
+  .texto-destacado p {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 10px; /* Ajusta el margen inferior del párrafo */
+  }
+  .boton {
+    margin-top: 20px; /* Ajusta la separación entre el texto y el botón */
+  }
+}
+
+.GrupoCartas {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  justify-content: left;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.card {
+  width: 200px;
+  margin: 50px;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.card-body {
+  text-align: center;
+}
+.contenedor {
+  position: relative;
+  width: 100vw; /* Ancho del contenedor igual al ancho de la ventana del navegador */
+  height: auto; /* Altura del contenedor igual a la altura de la ventana del navegador */
+  text-align: center;
+}
+.contenedor img {
+  width: 100%; /* Ancho de la imagen al 100% del contenedor */
+  height: 90%; /* Altura de la imagen al 100% del contenedor */
+  max-height: 90vh;
+  object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+  display: block; /* Para evitar espacios innecesarios */
+  margin-bottom: 20px;
+}
+
+.contenedor .texto {
+  position: absolute;
+  top: 47.417%; /* Cambiado a 63% para que se parezca al primero */
+  left: 36.8%; /* Mantenido igual */
+  width: 30%; /* Mantenido igual */
+  height: 65vh; /* Cambiado a 100vh para que coincida con el primero */
+  max-width: 500px; /* Mantenido igual */
+  background-color: rgba(49, 46, 46, 0.616); /* Mantenido igual */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+}
+
+
+
+
+
+/* //////////////////////////////// STYLES CONTACTO ///////////////////////////////////////////////*/
+
+
+h2 {
+  text-align: center;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  padding-top: 55px;
+
+}
+.contact .ice-cream-image img{
+  height: 100%;
+  object-fit: cover;
+}
+
+.ice-cream-image {
+  flex: 1;
+}
+
+.contact-form {
+  flex: 1;
+  padding-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccba8e;
+  color: white;
+  
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contact-form form {
+  width: 90%;
+}
+.contact-form label {
+  font-family: "Roboto", sans-serif;
+
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+select {
+  background: #fff;
+}
+
+textarea {
+  height: 100px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.contact-form input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.btn-contact{
+  background-color: #CAA433;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-contact:hover {
+  background-color: #9e7d1c;
+}
+
+.ice-cream-image {
+  position: relative;
+}
+
+.ice-cream-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+}
+
+.contact-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+  text-align: center;
+  z-index: 1; /* Asegura que el texto esté encima de la superposición */
+  font-size: 50px;
+  font-family: "Roboto", sans-serif;
+
+}
+@media screen and (max-width: 700px) {
+  .contact {
+      flex-direction: column;
+  }
+
+  .contact-form {
+      padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .contact-form form {
+      width: 380px;
+  }
+  .contact-text {
+    font-size: 80px;
+  }
+
 }
