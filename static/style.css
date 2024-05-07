@@ -1,3 +1,4 @@
+/* //////////////////////////////////Lau//////////////////////// */
 body,
 html {
   margin: 0;
@@ -72,6 +73,28 @@ footer {
 .redes-sociales a:hover {
   color: #000080; /* Color de los iconos al pasar el ratón */
 }
+.GrupoCartas {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  justify-content: left;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.card {
+  width: 200px;
+  margin: 50px;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.card-body {
+  text-align: center;
+}
+/* ///////////////////////////////////Florian/////////////////////// */
 
 /* Media query para pantallas pequeñas */
 @media screen and (max-width: 768px) {
@@ -317,26 +340,6 @@ footer {
   font-size: 36px;
 }
 
-body,
-html {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.navbar-nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  font-size: medium;
-}
-.navbar-nav a:hover {
-  font-size: large;
-  color: #000080;
-}
-
 /* Media queries para diferentes tamaños de pantalla */
 
 /* Pantallas pequeñas (teléfonos móviles) */
@@ -402,27 +405,6 @@ html {
   }
 }
 
-.GrupoCartas {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1300px;
-  justify-content: left;
-  flex-direction: row;
-  margin: 0 auto;
-}
-
-.card {
-  width: 200px;
-  margin: 50px;
-}
-
-.card img {
-  max-width: 100%;
-}
-
-.card-body {
-  text-align: center;
-}
 .contenedor {
   position: relative;
   width: 100vw; /* Ancho del contenedor igual al ancho de la ventana del navegador */
