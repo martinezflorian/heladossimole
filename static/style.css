@@ -96,7 +96,15 @@ footer {
 .card-body {
   text-align: center;
 }
-
+.GrupoCartas .card .card-title {
+  color: #ccba8e;
+}
+.GrupoCartas .card .card-text {
+  color: #9e7d1c;
+}
+.GrupoCartas .card {
+  background-color: #f0f0f0;
+}
 /* Media query para pantallas pequeñas */
 @media screen and (max-width: 768px) {
   .footer-text {
