@@ -459,10 +459,6 @@ html {
 /* //////////////////////////////// STYLES CONTACTO ///////////////////////////////////////////////*/
 
 
-h2 {
-  text-align: center;
-}
-
 .contact {
   display: flex;
   flex-wrap: wrap;
@@ -490,7 +486,7 @@ h2 {
   
 }
 
-img {
+.ice-cream-image img {
   max-width: 100%;
   height: auto;
 }
@@ -517,7 +513,7 @@ img {
 }
 
 
-select {
+.contact select {
   background: #fff;
 }
 
@@ -525,7 +521,7 @@ textarea {
   height: 100px;
 }
 
-label {
+.contact label {
   font-weight: bold;
 }
 
