@@ -2,7 +2,6 @@
 body,
 html {
   margin: 0;
-  margin-bottom: 70px;
   padding: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -94,7 +93,7 @@ footer {
   }
 }
 
-/* ///////////////////////////* Florian */ /////////////////////// */
+/* ///////////////////////////* Florian */
 .video-background {
   position: relative;
   width: 100%;
@@ -176,6 +175,7 @@ titulo-principal {
 
 .helado-panoramico2 {
   position: relative;
+  object-fit: cover;
   top: 0;
   width: 100%;
   height: 750px;
@@ -183,6 +183,7 @@ titulo-principal {
 
 .helado-panoramico4 {
   position: sticky;
+  object-fit: cover;
   top: 0;
   width: 100%;
   height: 750px;
@@ -410,4 +411,101 @@ h2 {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.contact-form form {
+  width: 90%;
+}
+.contact-form label {
+  font-family: "Roboto", sans-serif;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+select {
+  background: #fff;
+}
+
+textarea {
+  height: 100px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.contact-form input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.btn-contact {
+  background-color: #caa433;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-contact:hover {
+  background-color: #9e7d1c;
+}
+
+.ice-cream-image {
+  position: relative;
+}
+
+.ice-cream-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+}
+
+.contact-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+  text-align: center;
+  z-index: 1; /* Asegura que el texto esté encima de la superposición */
+  font-size: 50px;
+  font-family: "Roboto", sans-serif;
+}
+@media screen and (max-width: 700px) {
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .contact-form form {
+    width: 380px;
+  }
+  .contact-text {
+    font-size: 80px;
+  }
 }
