@@ -95,6 +95,16 @@ footer {
 .card {
   width: 200px;
   margin: 50px;
+  box-shadow: 7px 9px 5px 0px rgba(158,126,28,0.11);
+  -webkit-box-shadow: 7px 9px 5px 0px rgba(158,126,28,0.11);
+  -moz-box-shadow: 7px 9px 5px 0px rgba(158,126,28,0.11);
+  transition: all 200ms ease-in-out;
+}
+.card:hover{
+    box-shadow: 7px 9px 5px 0px rgba(158,126,28,0.31);
+    -webkit-box-shadow: 7px 9px 5px 0px rgba(158,126,28,0.31);
+    -moz-box-shadow: 7px 9px 5px 0px rgba(158,126,28,0.31);
+    transform: scale(1.1);
 }
 
 .card img {
