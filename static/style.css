@@ -260,16 +260,16 @@ titulo-principal {
   color: white;
   font-size: 24px;
   padding: 15px 30px;
-  border: none;
-  border-radius: 20px;
+  border: 2px solid #ccba8e;
+  border-radius: 30px;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  line-height: 1;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .boton:hover {
-  background-color: #000080;
+  background-color: #caa433;
 }
 
 .contenedor-imagen,
@@ -360,47 +360,46 @@ titulo-principal {
     font-size: 16px;
   }
 }
+@media screen and (max-width: 768px) {
+  .footer-text {
+    display: none; /* Oculta el párrafo en pantallas pequeñas */
+  }
 
+  .imagen-helado {
+    display: none !important; /* Oculta la imagen de helado en pantallas pequeñas */
+  }
 
-/* Pantallas medianas (tabletas) */
-@media only screen and (min-width: 601px) {
-  .video-background {
-    height: 60vh;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+  .video-content h1 {
+    font-size: 24px; /* Reduce el tamaño del título en pantallas pequeñas */
+  }
+
+  .video-content p {
+    font-size: 12px; /* Reduce el tamaño del texto en pantallas pequeñas */
+  }
+
+  .texto-sobre-imagen,
+  .texto {
+    padding: 10px; /* Ajusta el padding general para pantallas pequeñas */
+  }
+
+  .texto-recuadro {
+    padding: 10px; /* Ajusta el padding del recuadro para pantallas pequeñas */
+  }
+
+  .titulo2 {
+    font-size: 24px; /* Reduce el tamaño del título para pantallas pequeñas */
+  }
+
+  .texto-sobre-imagen h2,
+  .texto .titulo2 {
+    font-size: 24px; /* Reduce el tamaño del título secundario para pantallas pequeñas */
   }
 
   .texto-sobre-imagen p,
   .texto p {
-    font-size: 18px;
-    color: #333;
-    line-height: 1.5;
+    font-size: 16px; /* Reduce el tamaño del texto para pantallas pequeñas */
   }
-
-  .texto-destacado {
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-  .texto {
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-  .texto-destacado h2 {
-    font-size: 36px;
-    color: black;
-    margin-bottom: 10px;
-  }
-  .texto-destacado p {
-    font-size: 18px;
-    color: black;
-    margin-bottom: 10px;
-  }
-  .boton {
-    margin-top: 20px;
-  }
-
+}
 
 /* //////////////////////////////// STYLES CONTACTO ///////////////////////////////////////////////*/
 
