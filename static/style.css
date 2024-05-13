@@ -220,25 +220,25 @@ titulo-principal {
   margin-right: auto; /* Centrar horizontalmente */
 }
 
-  
-
 .texto-p {
   font-size: 18px;
 }
-
-
-
-
-
-
-
 
 .texto-destacado {
   padding: 20px;
   border-radius: 10px;
   margin-top: 20px;
 }
+.texto {
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
 
+.texto {
+  font-size: 18px;
+  color: black;
+}
 .texto-destacado h2 {
   font-size: 36px;
   color: black;
@@ -260,7 +260,7 @@ titulo-principal {
   color: white;
   font-size: 24px;
   padding: 15px 30px;
-  border: 2px solid #ccba8e;
+  border: 2px solid #a6935c;
   border-radius: 30px;
   cursor: pointer;
   text-decoration: none;
