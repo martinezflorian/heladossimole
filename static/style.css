@@ -8,7 +8,7 @@ html {
   font-style: normal;
 }
 
-.my-nav-link:hover {
+.linkNavbar:hover {
   font-size: large;
   color: #9e7d1c !important;
 }
@@ -17,7 +17,7 @@ html {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  height: 50px;
+  /* height: 50px; */
   align-items: end;
   font-size: medium;
 }
