@@ -8,7 +8,7 @@ html {
   font-style: normal;
 }
 
-.linkNavbar:hover {
+.my-nav-link:hover {
   font-size: large;
   color: #9e7d1c !important;
 }
@@ -17,6 +17,7 @@ html {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  height: 50px;
   align-items: end;
   font-size: medium;
 }
@@ -131,10 +132,13 @@ footer {
 
 /* ///////////////////////////* Florian */
 .video-background {
-  position: relative;
+  padding-top: 5vh; /* Reduce el espacio superior */
   width: 100%;
   height: 82vh;
   overflow: hidden;
+  padding-bottom: 5vh; /* Reduce el espacio inferior */
+  position: relative;
+  top: -40px; /* Ajusta la posición vertical según la altura del navbar */
 }
 
 .video-background video {
@@ -151,7 +155,7 @@ footer {
   color: white;
   text-align: center;
   width: 100%;
-  top: 50%;
+  top: 45%; /* Ajusta la posición vertical del contenido */
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -173,18 +177,15 @@ footer {
   max-width: 100%;
 }
 
-.titulo-azul {
+.titulo {
   font-size: 36px;
   text-transform: uppercase;
   color: #ccba8e;
   font-weight: bold;
-  text-align: center;
 }
 
 .box {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
   margin-left: auto;
   margin-right: auto;
   text-align: right;
@@ -200,62 +201,22 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 50px auto;
   max-width: 800px;
   text-align: center;
 }
 
 .helado-panoramico2 {
-  position: relative;
-  object-fit: cover;
-  top: 0;
-  width: 100%;
-  height: 750px;
-}
-
-.helado-panoramico4 {
-  position: sticky;
-  object-fit: cover;
-  top: 0;
-  width: 100%;
-  height: 750px;
+  width: 90%;
+  /* Ancho al 100% del contenedor */
+  max-height: 70vh; /* Altura máxima de 60vh */
+  object-fit: cover; /* Recorta la imagen para que se ajuste al contenedor */
+  margin-left: auto; /* Centrar horizontalmente */
+  margin-right: auto; /* Centrar horizontalmente */
 }
 
 .texto-p {
-  padding-top: 20px;
   font-size: 18px;
-  text-align: justify;
-}
-
-.contenedor-imagen {
-  position: relative;
-}
-
-.texto-sobre-imagen {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
-}
-
-.texto-sobre-imagen h2 {
-  font-weight: bold;
-  font-size: 36px;
-}
-
-.texto-sobre-imagen p {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.contenedor-imagen {
-  position: relative;
-}
-
-.texto-sobre-imagen {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
 }
 
 .texto-destacado {
@@ -266,13 +227,13 @@ footer {
 
 .texto-destacado h2 {
   font-size: 36px;
-  color: white;
+  color: black;
   margin-bottom: 10px;
 }
 
 .texto-destacado p {
   font-size: 18px;
-  color: white;
+  color: black;
 }
 
 .azul {
@@ -285,23 +246,32 @@ footer {
   color: white;
   font-size: 24px;
   padding: 15px 30px;
-  border: none;
-  border-radius: 20px;
+  border: 2px solid #ccba8e;
+  border-radius: 30px;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  line-height: 1;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .boton:hover {
-  background-color: #000080;
+  background-color: #caa433;
 }
 
-.contenedor .texto p {
-  font-size: 16px;
-  line-height: 1.5;
+.contenedor-imagen,
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinear al lado izquierdo */
 }
 
+.helado-panoramico4 {
+  width: 90%;
+  max-height: 70vh;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
 .titulo2 {
   font-size: 36px;
   font-weight: bold;
@@ -319,10 +289,10 @@ footer {
 @media only screen and (max-width: 600px) {
   .video-background {
     height: 50vh;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
   }
-  .texto-sobre-imagen {
-    width: 90%;
-  }
+
   .imagen-helado {
     display: none;
   }
@@ -334,70 +304,86 @@ footer {
   }
 }
 
-/* Pantallas medianas (tabletas) */
-@media only screen and (min-width: 601px) {
+/* Media queries para diferentes tamaños de pantalla */
+
+/* Pantallas pequeñas (teléfonos móviles) */
+@media only screen and (max-width: 600px) {
   .video-background {
-    height: 60vh;
-  }
-  .texto-sobre-imagen {
-    position: absolute;
-    top: 63%;
-    left: 24%;
-    width: 30%;
-    height: 100vh;
-    max-width: 500px;
-    background-color: rgba(49, 46, 46, 0.616);
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-    color: white;
+    height: 50vh;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
   }
 
-  .texto-destacado {
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
+  .imagen-helado {
+    display: none;
   }
-  .texto-destacado h2 {
-    font-size: 36px;
-    color: white;
-    margin-bottom: 10px;
+  .video-content h1 {
+    font-size: 24px;
   }
-  .texto-destacado p {
-    font-size: 18px;
-    color: white;
-    margin-bottom: 10px;
+  .video-content p {
+    font-size: 12px;
   }
-  .boton {
-    margin-top: 20px;
+  .texto-sobre-imagen,
+  .texto {
+    padding: 10px;
   }
-  .contenedor {
-    position: relative;
-    width: 100vw;
-    height: auto;
-    text-align: center;
+  .texto-recuadro {
+    padding: 10px; /* Ajustar el padding para pantallas aún más pequeñas */
   }
-  .contenedor img {
-    width: 100%;
-    height: 90%;
-    max-height: 90vh;
-    object-fit: cover;
-    display: block;
-    margin-bottom: 20px;
+  .texto-sobre-imagen h2,
+  .texto .titulo2 {
+    font-size: 24px;
   }
 
-  .contenedor .texto {
-    position: absolute;
-    top: 0%;
-    left: 23.8%;
-    width: 30%;
-    height: 65vh;
-    max-width: 500px;
-    background-color: rgba(49, 46, 46, 0.616);
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-    color: white;
+  .texto-recuadro {
+    padding: 10px; /* Ajustar el padding para pantallas aún más pequeñas */
+  }
+  .titulo2 {
+    font-size: 24px; /* Reducir el tamaño del título para pantallas pequeñas */
+  }
+  .texto-sobre-imagen p,
+  .texto p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer-text {
+    display: none; /* Oculta el párrafo en pantallas pequeñas */
+  }
+
+  .imagen-helado {
+    display: none !important; /* Oculta la imagen de helado en pantallas pequeñas */
+  }
+
+  .video-content h1 {
+    font-size: 24px; /* Reduce el tamaño del título en pantallas pequeñas */
+  }
+
+  .video-content p {
+    font-size: 12px; /* Reduce el tamaño del texto en pantallas pequeñas */
+  }
+
+  .texto-sobre-imagen,
+  .texto {
+    padding: 10px; /* Ajusta el padding general para pantallas pequeñas */
+  }
+
+  .texto-recuadro {
+    padding: 10px; /* Ajusta el padding del recuadro para pantallas pequeñas */
+  }
+
+  .titulo2 {
+    font-size: 24px; /* Reduce el tamaño del título para pantallas pequeñas */
+  }
+
+  .texto-sobre-imagen h2,
+  .texto .titulo2 {
+    font-size: 24px; /* Reduce el tamaño del título secundario para pantallas pequeñas */
+  }
+
+  .texto-sobre-imagen p,
+  .texto p {
+    font-size: 16px; /* Reduce el tamaño del texto para pantallas pequeñas */
   }
 }
 
