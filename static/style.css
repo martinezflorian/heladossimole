@@ -132,21 +132,13 @@ footer {
 
 /* ///////////////////////////* Florian */
 .video-background {
-  padding-top: 5vh; /* Reduce el espacio superior */
-  width: 100%;
+  width: 100vw;
   height: 82vh;
   overflow: hidden;
-  padding-bottom: 5vh; /* Reduce el espacio inferior */
+  padding-bottom: 5vh;
+  display: block;
   position: relative;
-  top: -40px; /* Ajusta la posición vertical según la altura del navbar */
-}
-
-.video-background video {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  /* top: -40px; */
 }
 
 .video-content {
@@ -281,110 +273,6 @@ footer {
   color: #ccba8e;
   font-weight: bold;
   font-size: 36px;
-}
-
-/* Media queries para diferentes tamaños de pantalla */
-
-/* Pantallas pequeñas (teléfonos móviles) */
-@media only screen and (max-width: 600px) {
-  .video-background {
-    height: 50vh;
-    padding-top: 4vh;
-    padding-bottom: 4vh;
-  }
-
-  .imagen-helado {
-    display: none;
-  }
-  .video-content h1 {
-    font-size: 24px;
-  }
-  .video-content p {
-    font-size: 12px;
-  }
-}
-
-/* Media queries para diferentes tamaños de pantalla */
-
-/* Pantallas pequeñas (teléfonos móviles) */
-@media only screen and (max-width: 600px) {
-  .video-background {
-    height: 50vh;
-    padding-top: 4vh;
-    padding-bottom: 4vh;
-  }
-
-  .imagen-helado {
-    display: none;
-  }
-  .video-content h1 {
-    font-size: 24px;
-  }
-  .video-content p {
-    font-size: 12px;
-  }
-  .texto-sobre-imagen,
-  .texto {
-    padding: 10px;
-  }
-  .texto-recuadro {
-    padding: 10px; /* Ajustar el padding para pantallas aún más pequeñas */
-  }
-  .texto-sobre-imagen h2,
-  .texto .titulo2 {
-    font-size: 24px;
-  }
-
-  .texto-recuadro {
-    padding: 10px; /* Ajustar el padding para pantallas aún más pequeñas */
-  }
-  .titulo2 {
-    font-size: 24px; /* Reducir el tamaño del título para pantallas pequeñas */
-  }
-  .texto-sobre-imagen p,
-  .texto p {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .footer-text {
-    display: none; /* Oculta el párrafo en pantallas pequeñas */
-  }
-
-  .imagen-helado {
-    display: none !important; /* Oculta la imagen de helado en pantallas pequeñas */
-  }
-
-  .video-content h1 {
-    font-size: 24px; /* Reduce el tamaño del título en pantallas pequeñas */
-  }
-
-  .video-content p {
-    font-size: 12px; /* Reduce el tamaño del texto en pantallas pequeñas */
-  }
-
-  .texto-sobre-imagen,
-  .texto {
-    padding: 10px; /* Ajusta el padding general para pantallas pequeñas */
-  }
-
-  .texto-recuadro {
-    padding: 10px; /* Ajusta el padding del recuadro para pantallas pequeñas */
-  }
-
-  .titulo2 {
-    font-size: 24px; /* Reduce el tamaño del título para pantallas pequeñas */
-  }
-
-  .texto-sobre-imagen h2,
-  .texto .titulo2 {
-    font-size: 24px; /* Reduce el tamaño del título secundario para pantallas pequeñas */
-  }
-
-  .texto-sobre-imagen p,
-  .texto p {
-    font-size: 16px; /* Reduce el tamaño del texto para pantallas pequeñas */
-  }
 }
 
 /* //////////////////////////////// STYLES CONTACTO ///////////////////////////////////////////////*/
