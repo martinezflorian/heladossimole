@@ -231,6 +231,12 @@ footer {
   color: #ccba8e;
   font-weight: bold;
 }
+.probando {
+  text-align: center;
+}
+.pProbando {
+  text-align: center;
+}
 
 .boton {
   background-color: #ccba8e;
@@ -244,7 +250,9 @@ footer {
   display: inline-block;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
-
+.botonNuestraHistoria {
+  text-align: center;
+}
 .boton:hover {
   background-color: #caa433;
 }
