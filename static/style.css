@@ -174,7 +174,12 @@ footer {
   margin-right: auto;
   max-width: 100%;
 }
-
+.titulo-azul
+{
+  font-size: 30px;
+  font-weight: bold;
+  
+}
 .titulo {
   font-size: 36px;
   text-transform: uppercase;
@@ -302,7 +307,11 @@ a {
     padding-top: 4vh;
     padding-bottom: 4vh;
   }
-
+  .container1 {
+    display:flex;
+    flex-direction: column;
+    object-fit: cover;
+  }
   .imagen-helado {
     display: none;
   }
