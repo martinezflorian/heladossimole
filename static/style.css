@@ -189,11 +189,10 @@ footer {
 
 .box {
   padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: right;
+  margin: 0;
+  text-align: left;
   box-sizing: border-box;
-  transition: transform 0.3s ease;
+  flex: 1;
 }
 
 .box:hover {
@@ -202,12 +201,13 @@ footer {
 
 .container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin: 50px auto;
-  max-width: 800px;
+  max-width: 1200px;
+  padding: 0 20px;
   text-align: center;
-  margin-bottom: 100px;
 }
 
 .helado-panoramico2 {
@@ -307,14 +307,17 @@ a {
     padding-top: 4vh;
     padding-bottom: 4vh;
   }
-  .container1 {
+  .container {
     display:flex;
     flex-direction: column;
     object-fit: cover;
   }
-  .imagen-helado {
-    display: none;
+  .imagen-helado1 {
+    width: 100%; /* Ajustar a 100% del contenedor */
+    height: 50vh; /* Reducir la altura máxima para pantallas pequeñas */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
   }
+
   .video-content h1 {
     font-size: 24px;
   }
