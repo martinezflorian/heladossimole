@@ -376,7 +376,9 @@ a {
   .imagen-helado {
     display: none !important; /* Oculta la imagen de helado en pantallas pequeñas */
   }
-
+  .imagen-helado1 {
+    display: none !important; /* Oculta la imagen de helado en pantallas pequeñas */
+  }
   .video-content h1 {
     font-size: 24px; /* Reduce el tamaño del título en pantallas pequeñas */
   }
