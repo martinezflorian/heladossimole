@@ -10,13 +10,13 @@ const acciones = require("../controllers/acciones");
 //4- Declaramos las rutas y métodos, y el llamado específico para cada acción.
 // Ruta de listado en general
 router.get('/', acciones.getAllSabores);
-//Ruta para la consulta de peliculas por id
-router.get('/:id', acciones.getSaborID);
-//Ruta para crear una pelicula
+//Ruta para la consulta de sabor
+router.get('/:id', acciones.getSaborID);//
+//Ruta para crear un pedido
 router.post('/', acciones.createPedido);
-//Ruta para actualizar una pelicula
-router.put('/:id', acciones.updatePedido);
-//Ruta para borrar una pelicula
+//Ruta para cambiar pedido
+router.put('/:id', acciones.updatePedido);//
+//Ruta para borrar pedido
 router.delete('/:id',  acciones.deletePedido);
 //5- Exportamos el módulo
 module.exports = router;
