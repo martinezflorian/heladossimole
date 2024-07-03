@@ -37,7 +37,6 @@ const editarSabor =(req,res)=>{
     });
 };
 
-
 //Generamos el método 3- agregarSabor //post
 const agregarSabor = (req,res)=>{
     //desestructuramos request
@@ -49,6 +48,19 @@ const agregarSabor = (req,res)=>{
         if(err){throw err}
         res.json(result)
     });
+};
+
+//Generamos el método 4- borrarSabor //delete
+const borrarSabor =(req,res)=>{
+    //destructuración
+    const {id} = req.params;
+    //consulta sql
+    const sql = 'DELETE FROM sabores WHERE id = ?';
+    //Pasamos la consulta
+    bd.query(sql,[id],(err,result)=>{
+        if(err) {throw err}
+        res.json({mensaje:"Sabor eliminado"})
+    })
 };
 
 //Gerenamos el método 5- createPedido //post
@@ -78,19 +90,38 @@ const elegirSabor =(req,res)=>{
 };
 
 //Generamos el métoido 7- cambiarPedido //put
+const cambiarPedido = (req,res)=>{
+    const {id} =req.params;
+    const {tipo, sabores, pago, retiro} =req.body;
+    const sql= 'UPDATE pedidos SET tipo=?, sabores=?, pago=?, retiro=? WHERE id=?';
+    bd.query(sql, [tipo, sabores, pago, retiro], (err,result)=>{
+        if(err) {throw err}
+        res.json({mensaje:"Pedido actualizado"})
+    });
+};
 
-//5- .updateMovie
-//const updateMovie = (req,res)=>{
-    //desestructuracion de la cosnulta
-    //const {id} = req.params;
-    //const {title,director,year} = req.body;
-    //creamos la consulta sql 
-    //const sql = 'UPDATE movies SET title = ?, director = ?, year = ? WHERE id = ?';
-    //enviar la consulta a la base de datos
-    //db.query(sql, [title,director,year,id], (err, result)=>{
-        //si sucede algun error
-        //if(err){throw err}
-        //si todo sale bien
-        //res.json({mensaje:"Película actualizada"})
-    //});
-//};
+//Generamos el método 8- deletePedido //delete
+const deletePedido = (req,res)=>{
+    //destructuración
+    const {id} = req.params;
+    //consulta sql
+    const sql = 'DELETE FROM pedidos WHERE id = ?';
+    bd.query(sql, [id], (err,result)=>{
+        if(err){throw err}
+        res.jason({mensaje: "Pedido eliminado"})
+    });
+};
+
+//Exportamos los módulos
+module.exports = {
+    getAllSabores,
+    editarSabor,
+    agregarSabor,
+    borrarSabor,
+    createPedido,
+    elegirSabor,
+    cambiarPedido,
+    deletePedido 
+};
+
+// Pasamos a codificar bd.js
