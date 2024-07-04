@@ -108,7 +108,7 @@ const deletePedido = (req,res)=>{
     const sql = 'DELETE FROM pedidos WHERE id = ?';
     bd.query(sql, [id], (err,result)=>{
         if(err){throw err}
-        res.jason({mensaje: "Pedido eliminado"})
+        res.json({mensaje: "Pedido eliminado"})
     });
 };
 
