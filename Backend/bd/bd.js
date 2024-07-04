@@ -54,7 +54,7 @@ connection.query(sqlCreateBD, (err, results) => {
         CREATE TABLE IF NOT EXISTS pedidos (
             id INT AUTO_INCREMENT PRIMARY KEY,
             tipo VARCHAR(255) NOT NULL,
-            isabores VARCHAR(255) NOT NULL,
+            sabores VARCHAR(255) NOT NULL,
             pago INT NOT NULL
             retiro VARCHAR(25) NOT NULL
         );
