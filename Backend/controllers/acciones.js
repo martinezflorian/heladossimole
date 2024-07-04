@@ -33,7 +33,7 @@ const editarSabor =(req,res)=>{
     //enviar consulta a base de datos
     bd.query(sql, [name,ingredientes], (err,result)=>{
         if (err){throw err}
-        res.json({mensaje:"Sabor agregado al menú"})
+        res.json({mensaje:"Sabor editado"})
     });
 };
 
@@ -46,7 +46,7 @@ const agregarSabor = (req,res)=>{
     //enviamos a base de datos
     bd.query(sql, [name,ingredientes], (err,result)=>{
         if(err){throw err}
-        res.json({mensaje: "Sabor editado"})
+        res.json({mensaje: "Sabor agregado al menú"})
     });
 };
 
