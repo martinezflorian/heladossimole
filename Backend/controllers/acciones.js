@@ -46,7 +46,7 @@ const agregarSabor = (req,res)=>{
     //enviamos a base de datos
     bd.query(sql, [name,ingredientes], (err,result)=>{
         if(err){throw err}
-        res.json(result)
+        res.json({mensaje: "Sabor editado"})
     });
 };
 
@@ -85,7 +85,7 @@ const elegirSabor =(req,res)=>{
     //enviamos a base de datos
     bd.query(sql, [id], (err,result)=>{
         if(err) {throw err};
-        res.json(result)
+        res.json({mensaje: "Su sabor/es fue elegido"})
     });
 };
 
