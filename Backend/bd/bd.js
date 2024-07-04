@@ -8,7 +8,7 @@ const mysql= require("mysql2");
 const connection = mysql.createConnection({
     host: "localhost",
     user: "root", // USER el de Mysql local de sus PCs
-    password: "admi123", //PASS el de Mysql local de sus PCs
+    password: "admi123", //PASSWORD el de Mysql local de sus PCs
     port: 3306
 });
 
@@ -34,13 +34,13 @@ connection.connect((err)=>{
         //en caso de éxito
         console.log("Base de datos: CREADA/EXISTENTE");
 
-        //creacion de las tablas
-        connection.changeUser({database:"heladeria_db"}, (err)=>{
+        //TABLAS - creación de las tablas
+        connection.changeUser({database:"heladeria_bd"}, (err)=>{
             if (err){
-                console.log("Error al cambiar a la base de datos heladeria_db:" + err);
+                console.log("Error al cambiar a la base de datos heladeria_bd:" + err);
                 return;
             };
-            
+
         //generamos la consulta para generar las tablas
         const createTableQuery = `
         CREATE TABLE IF NOT EXISTS sabores (

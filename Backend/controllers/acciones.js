@@ -40,7 +40,7 @@ const editarSabor =(req,res)=>{
 //Generamos el método 3- agregarSabor //post
 const agregarSabor = (req,res)=>{
     //desestructuramos request
-    const {name, ingredientes} = req.body 
+    const {name, ingredientes} = req.body; 
     //creamos consulta
     const sql = 'INSERT INTO sabores (name, ingredientes) VALUES (?,?)';
     //enviamos a base de datos
