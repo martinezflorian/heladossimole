@@ -2,19 +2,24 @@
 
 //1- importamos express
 const express = require("express");
+
 //2- instanciamos express
-const app =express();
+const app = express();
 //3- importamos módulo router/pedidos
-const routes =require ("../routes/pedidos");
+const pedidos = require("../routes/pedidos");
 //4- declaramos el puerto
-const PORT =3000;
+const PORT = 4000;
 //5- usamos el middleware de json
 app.use(express.json());
 //6- prefijo principal de rutas y subrutas
-app.use('/pedido', pedidos);
+app.use("/pedido", pedidos);
+
+app.get("/sabores", (req, res) => {
+  res.send("Aqui van los sabores de helado");
+});
 //7- iniciamos servidor
-app.listen(PORT, ()=>{
-    console.log(`Servidor escuchando en puerto: ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Servidor escuchando en puerto: ${PORT}`);
 });
 
 //8- continúa en 'routes/pedidos'...
