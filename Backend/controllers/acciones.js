@@ -85,24 +85,28 @@ const createPedido = (req, res) => {
   //enviamos a base de datos
   bd.query(sql, [tipo, sabores, pago, retiro], (err, result) => {
     if (err) {
-      throw err;
+      console.error("Error en la consulta SQL:", err);
+      res.status(500).json({ error: "Error interno del servidor" });
+      return;
     }
     res.json(result);
   });
 };
 
 // Generamos el método 6- elegirSabor //get
-const elegirSabor = (req, res) => {
+const elegirPedido = (req, res) => {
   //desestucturación del id
   const { id } = req.params;
   //creamos la consulta
-  const sql = "SELECT * FROM sabores WHERE id = ?";
+  const sql = "SELECT * FROM pedidos WHERE id = ?";
   //enviamos a base de datos
   bd.query(sql, [id], (err, result) => {
     if (err) {
-      throw err;
+      console.error("Error en la consulta SQL:", err);
+      res.status(500).json({ error: "Error interno del servidor" });
+      return;
     }
-    res.json({ mensaje: "Su sabor/es fue elegido" });
+    res.json({ result });
   });
 };
 
@@ -112,9 +116,11 @@ const cambiarPedido = (req, res) => {
   const { tipo, sabores, pago, retiro } = req.body;
   const sql =
     "UPDATE pedidos SET tipo=?, sabores=?, pago=?, retiro=? WHERE id=?";
-  bd.query(sql, [tipo, sabores, pago, retiro], (err, result) => {
+  bd.query(sql, [tipo, sabores, pago, retiro, id], (err, result) => {
     if (err) {
-      throw err;
+      console.error("Error en la consulta SQL:", err);
+      res.status(500).json({ error: "Error interno del servidor" });
+      return;
     }
     res.json({ mensaje: "Pedido actualizado" });
   });
@@ -128,7 +134,9 @@ const deletePedido = (req, res) => {
   const sql = "DELETE FROM pedidos WHERE id = ?";
   bd.query(sql, [id], (err, result) => {
     if (err) {
-      throw err;
+      console.error("Error en la consulta SQL:", err);
+      res.status(500).json({ error: "Error interno del servidor" });
+      return;
     }
     res.json({ mensaje: "Pedido eliminado" });
   });
@@ -141,7 +149,7 @@ module.exports = {
   agregarSabor,
   borrarSabor,
   createPedido,
-  elegirSabor,
+  elegirPedido,
   cambiarPedido,
   deletePedido,
 };

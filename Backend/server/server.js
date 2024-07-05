@@ -14,9 +14,6 @@ app.use(express.json());
 //6- prefijo principal de rutas y subrutas
 app.use("/pedido", pedidos);
 
-app.get("/sabores", (req, res) => {
-  res.send("Aqui van los sabores de helado");
-});
 //7- iniciamos servidor
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en puerto: ${PORT}`);
