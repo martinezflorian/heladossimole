@@ -8,7 +8,7 @@ const app = express();
 //3- importamos módulo router/pedidos
 const pedidos = require("../routes/pedidos");
 //4- declaramos el puerto
-const PORT = 4000;
+const PORT = 3000;
 //5- usamos el middleware de json
 app.use(express.json());
 //6- prefijo principal de rutas y subrutas

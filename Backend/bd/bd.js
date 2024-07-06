@@ -55,11 +55,7 @@ connection.query(sqlCreateBD, (err, results) => {
             id INT AUTO_INCREMENT PRIMARY KEY,
             tipo VARCHAR(255) NOT NULL,
             sabores VARCHAR(255) NOT NULL,
-<<<<<<< HEAD
             pago INT NOT NULL,
-=======
-            pago INT NOT NULL
->>>>>>> d9bac9a4ded14805b07cb128f22d0b9e716d281d
             retiro VARCHAR(25) NOT NULL
         );
         `;

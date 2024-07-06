@@ -19,7 +19,7 @@ router.delete("/sabores/:id", acciones.borrarSabor);
 //Ruta para crear un pedido
 router.post("/pedidos", acciones.createPedido);
 //Ruta para elegir sabores según el pedido
-router.get("/pedidos/:id", acciones.elegirPedido);
+router.get("/pedidos", acciones.elegirPedido);
 //Ruta para cambiar pedido
 router.put("/pedidos/:id", acciones.cambiarPedido);
 //Ruta para borrar pedido

@@ -98,7 +98,7 @@ const elegirPedido = (req, res) => {
   //desestucturación del id
   const { id } = req.params;
   //creamos la consulta
-  const sql = "SELECT * FROM pedidos WHERE id = ?";
+  const sql = "SELECT * FROM pedidos";
   //enviamos a base de datos
   bd.query(sql, [id], (err, result) => {
     if (err) {
